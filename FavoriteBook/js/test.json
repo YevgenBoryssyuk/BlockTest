@@ -1,0 +1,94 @@
+
+{"questions": [
+    {
+      "question": "Яке з названих міст знаходиться в мирі Пісні Льоду і Вогню?",
+      "answers": [
+        {"text": "Ейгонфорт", "correct": true},
+        {"text": "Рим", "correct": false},
+        {"text": "Лондон", "correct": false},
+        {"text": "Сінгапур", "correct": false}
+      ]
+    },
+    {
+      "question": "Яка з наступних фраз є девізом дому Старків?",
+      "answers": [
+        {"text": "Прірва іншим і дім своїм", "correct": false},
+        {"text": "Вірність сім'ї", "correct": false},
+        {"text": "Боїться, що Лис її не вкусить", "correct": false},
+        {"text": "Зима наближається", "correct": true}
+      ]
+    },
+    {
+      "question": "Хто з персонажів є незаконним сином Еддарда Старка?",
+      "answers": [
+        {"text": "Теон Грейджой", "correct": false},
+        {"text": "Брандон Старк", "correct": false},
+        {"text": "Джон Сноу", "correct": true},
+        {"text": "Робб Старк", "correct": false}
+      ]
+    },
+    {
+      "question": "Яка країна є рідною для Дейенеріс Таргарієн?",
+      "answers": [
+        {"text": "Браавос", "correct": false},
+        {"text": "Есос", "correct": true},
+        {"text": "Уестерос", "correct": false},
+        {"text": "Дорн", "correct": false}
+      ]
+    },
+    {
+        "question": "Хто є автором книг, на яких базується телесеріал Гра Престолів?",
+        "answers": [
+          {"text": "Джоан Роулінг", "correct": false},
+          {"text": "Джордж Мартін", "correct": true},
+          {"text": "Джордж Оруелл", "correct": false},
+          {"text": "Курт Воннеґут", "correct": false}
+        ]
+    },
+    {
+        "question": "Яка книга в серії 'Пісня Льоду і Вогню' першою вийшла в 1996 році?",
+        "answers": [
+          {"text": "Гра Престолів", "correct": true},
+          {"text": "Буря Мечів", "correct": false},
+          {"text": "Танець з драконами", "correct": false},
+          {"text": "Міст іншого світу", "correct": false}
+        ]
+      },
+      {
+        "question": "Що символізує Дракон?",
+        "answers": [
+          {"text": "Любов", "correct": false},
+          {"text": "Чистоту", "correct": false},
+          {"text": "Мудрість", "correct": false},
+          {"text": "Владу", "correct": true}
+        ]
+      },
+      {
+        "question": "Хто з персонажів став першим Королем на Залізному Троні?",
+        "answers": [
+          {"text": "Мерн Гарден", "correct": false},
+          {"text": "Еддард Старк", "correct": false},
+          {"text": "Ейгон Таргарієн", "correct": true},
+          {"text": "Джерольд Ланністер", "correct": false}
+        ]
+      },
+      {
+        "question": "Яка з книг серії 'Пісня Льоду і Вогню' має найбільшу кількість глав?",
+        "answers": [
+          {"text": "Гра престолів", "correct": false},
+          {"text": "Танець з драконами", "correct": true},
+          {"text": "Вогонь і Кров", "correct": false},
+          {"text": "Буря мечів", "correct": false}
+        ]
+      },
+      {
+          "question": "Хто з персонажів у серії 'Пісня Льоду і Вогню' відомий як 'Королева Драконів'?",
+          "answers": [
+            {"text": "Мельісандра", "correct": false},
+            {"text": "Дейенеріс Таргарієн", "correct": true},
+            {"text": "Серсея Ланістер", "correct": false},
+            {"text": "Санса Старк", "correct": false}
+          ]
+      }
+  ]
+}

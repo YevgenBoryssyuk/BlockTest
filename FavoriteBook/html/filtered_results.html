@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Результати фільтрації</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        
+    }
+    .filter-label {
+        font-size: 20px; /* Задайте бажаний розмір шрифту для підписів фільтрів */
+        font-weight: bold; /* Зробіть текст жирним */
+    }
+    .result-item {
+        margin-bottom: 10px; /* Відступ між результуючими елементами */
+    }
+</style>
+</head>
+<body>
+<h2>Результати фільтрації:</h2>
+<div id="results"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Отримайте дані опитування з localStorage
+    const surveys = JSON.parse(localStorage.getItem('surveys'));
+
+    // Фільтруйте дані за значенням genre1
+    const genreFilter = 'Fiction';
+    const filteredSurveysByGenre = surveys.filter(survey => survey.genre2 === genreFilter);
+
+    // Фільтруйте дані за значенням send_freq
+    const frequencyFilter = 'Щотижня';
+    const filteredSurveysByFrequency = surveys.filter(survey => survey.send_freq === frequencyFilter);
+
+    // Фільтруйте дані за значенням quantity
+    const minQuantity = 5;
+    const maxQuantity = 6;
+    const filteredSurveysByQuantity = surveys.filter(survey => survey.quantity >= minQuantity && survey.quantity <= maxQuantity);
+
+    console.log(filteredSurveysByGenre); // Виведіть результати фільтрації в консоль
+    console.log(filteredSurveysByFrequency); // Виведіть результати фільтрації в консоль
+    console.log(filteredSurveysByQuantity); // Виведіть результати фільтрації в консоль
+
+    // Отримайте контейнер для результатів
+    const resultsContainer = document.getElementById('results');
+
+    // Відобразіть результати фільтрації за genre1
+    if (filteredSurveysByGenre.length > 0) {
+        const genreDiv = document.createElement('div');
+        genreDiv.textContent = 'Результати фільтрації за жанром: ' + genreFilter;
+        genreDiv.classList.add('filter-label');
+        resultsContainer.appendChild(genreDiv);
+        filteredSurveysByGenre.forEach(survey => {
+            const div = document.createElement('div');
+            div.textContent = JSON.stringify(survey);
+            div.classList.add('result-item');
+            resultsContainer.appendChild(div);
+        });
+    } else {
+        resultsContainer.textContent = 'Немає результатів для відображення за жанром: ' + genreFilter;
+    }
+
+    // Відобразіть результати фільтрації за send_freq
+    if (filteredSurveysByFrequency.length > 0) {
+        const frequencyDiv = document.createElement('div');
+        frequencyDiv.textContent = 'Результати фільтрації за частотою надсилання: ' + frequencyFilter;
+        frequencyDiv.classList.add('filter-label');
+        resultsContainer.appendChild(frequencyDiv);
+        filteredSurveysByFrequency.forEach(survey => {
+            const div = document.createElement('div');
+            div.textContent = JSON.stringify(survey);
+            div.classList.add('result-item');
+            resultsContainer.appendChild(div);
+        });
+    } else {
+        resultsContainer.textContent = 'Немає результатів для відображення за частотою надсилання: ' + frequencyFilter;
+    }
+
+    // Відобразіть результати фільтрації за quantity
+    if (filteredSurveysByQuantity.length > 0) {
+        const quantityDiv = document.createElement('div');
+        quantityDiv.textContent = 'Результати фільтрації за кількістю книг у підбірці: ' + minQuantity + '-' + maxQuantity;
+        quantityDiv.classList.add('filter-label');
+        resultsContainer.appendChild(quantityDiv);
+        filteredSurveysByQuantity.forEach(survey => {
+            const div = document.createElement('div');
+            div.textContent = JSON.stringify(survey);
+            div.classList.add('result-item');
+            resultsContainer.appendChild(div);
+        });
+    } else {
+        resultsContainer.textContent = 'Немає результатів для відображення за кількістю книг у підбірці: ' + minQuantity + '-' + maxQuantity;
+    }
+});
+
+
+</script>
+</body>
+</html>

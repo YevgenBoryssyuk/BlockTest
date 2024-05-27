@@ -1,0 +1,255 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EADDCA;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  #quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  #question {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #answers {
+    margin-bottom: 20px;
+  }
+  
+  .answer-option {
+    margin-bottom: 10px;
+  }
+  
+  #submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: block; /* Зробити кнопку блоковим елементом */
+    margin: 20px auto 0; 
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+    font-size:30px;
+  }
+
+
+
+
+.smallBlock h3 {
+    font-style: italic;
+}
+
+.centralColumn p, #lawsOfPower p {
+    line-height: 1.5;
+}
+
+.smallBlock p, ul, ol {
+    text-align: left;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding:20px;
+    position: relative;
+}
+
+.addBlock, .addBlock2 {
+    width: 2%;
+    position: absolute; /* Додано */
+    top: 40px; /* Змінено */
+    bottom: 40px; /* Змінено */
+    flex: 1 1 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #433;
+    text-transform: uppercase;
+    border-radius: 10px;
+    line-height: 1.6;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation-name: example;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.smallBlock {
+    flex: 1 1 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #c9bfac;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #433;
+    border-radius: 10px;
+    line-height: 1.6;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+
+.smallBlock, .addBlock, .addBlock2{
+    min-height: 100vh;
+}
+
+
+@keyframes example {
+    0% {background-color: #ffffff;} /* Від червоного */
+    50% {background-color: #6e330e;} /* До жовтого */
+    100% {background-color: #ffffff;} /* Знову до червоного */
+}
+
+
+.addBlock {
+    left: 2%;
+}
+
+.addBlock2 {
+    right:2%;
+}
+
+.centralColumn {
+    height: auto;
+    width: 86%; /* Задаємо ширину блоку */
+    margin: 0 auto; /* Вирівнюємо по центру */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 15px; /* Зменшити відступи */
+    }
+
+    .addBlock, .addBlock2 {
+        width: 1%; /* Зменшити ширину блоків */
+    }
+
+}
+
+
+header {
+    background-color: #6e330e;
+    color: #fff;
+    padding: 20px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Вирівнюємо по вертикалі */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    white-space: nowrap;
+}
+
+.menu li {
+    margin-left: 20px; /* Додати відступ між пунктами меню */
+}
+
+.menu li:first-child {
+    margin-left: 0; /* Зняти відступ для першого пункту меню */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 5px; /* Задати відступи */
+    border-radius: 5px; /* Закруглити кути */
+    background-color: #6e330e; /* Фоновий колір */
+    transition: background-color 0.3s; /* Плавна зміна фонового кольору */
+}
+
+
+
+.menu a.text-link:hover {
+    background-color: #8c4e22; /* Змінити фон при наведенні */
+}
+.menu a.text-link {
+    font-size: 18px;
+    display: flex; /* Додати */
+    align-items: center; /* Додати */
+    height: 50%; /* Додати */
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .menu.open li:first-child {
+        display: none; /* Перший елемент не відображається */
+    }
+    .mobile-menu-toggle {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: #6e330e;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    }
+
+
+    .menu.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust as needed based on your header height */
+        left: 0;
+        background-color: #6e330e;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .menu.open li {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .menu.open a {
+        display: block;
+        padding: 10px 15px;
+    }
+    .container {
+        padding: 10px; /* Зменшити відступи */
+    }
+
+    .addBlock, .addBlock2 {
+        width: 0.5%; /* Зменшити ширину блоків */
+    }
+}
